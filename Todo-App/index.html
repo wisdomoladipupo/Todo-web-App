@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.google   apis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Sans+Mono:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Todo App</title>
+  </head>
+  <body>
+    <nav>
+      <div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+          />
+        </svg>
+      </div>
+
+      <ul>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">For Teams</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Resources</a></li>
+      </ul>
+    </nav>
+
+    <div class="organize">
+      <h2>
+        organize your work <br />
+        and  life
+      </h2>
+
+   <div class="image_container">
+    <img src="images/worklife image.jpg" alt="work image">
+    <img src="images/writing todo.avif" alt="writing">
+   </div>
+   <button id="ascend" class="start_btn">Click to Start Your List</button>
+    </div>
+
+   
+
+    <div class="content_container">
+      <aside>
+        <ul>
+          <li>Today</li>
+          <li>Home</li>
+          <li>My Task</li>
+          <li>Inbox</li>
+        </ul>
+      </aside>
+
+      <main>
+        <div class="form_input">
+          <h2>Todo List</h2>
+          <h2>click on the button to delete a Todo</h2>
+          <form id="listForm">
+            <label for="add_todo">
+              <input type="text" id="add_todo" name="add_todo" />
+            </label>
+            <button id="submit" type="submit">submit</button>
+          </form>
+          <ul id="todos"></ul>
+        </div>
+      </main>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

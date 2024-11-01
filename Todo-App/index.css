@@ -1,0 +1,229 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #195eff;
+  --font-family: "Noto Sans Mono", monospace;
+  --dancing-script-font: "Dancing Script", cursive;
+  --text-color: black;
+  --banner-background-color: #d3efff;
+  --body-background: white;
+}
+
+body {
+  text-align: center;
+  color: var(--text-color);
+  background: var(--body-background);
+}
+
+nav {
+  background: var(--banner-background-color);
+  position: sticky;
+  height: 3em;
+  top: 0.1em;
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2em;
+  color: var(--background-color);
+}
+
+nav h1 {
+  font-size: 3em;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1em;
+  list-style-type: none;
+}
+
+nav ul li a {
+  font-size: 1.2em;
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+/* page content layout css */
+.image_container{
+position: absolute;
+top: 2em;
+left: 15em;
+}
+
+.image_container img:nth-child(2) {
+  height: 20em;
+  border-radius: 2em;
+}
+.content_container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content_container aside {
+  position: absolute;
+  top: -9em;
+  left: 0;
+  width: 20em;
+  height: 61em;
+  border-top-right-radius: 2em;
+  display: flex;
+  flex-direction: column;
+  font-size: 1em;
+  background: var(--banner-background-color);
+}
+
+.content_container aside ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  align-items: self-start;
+  justify-content: space-between;
+  margin-top: 2em;
+  font-size: 1.6em;
+}
+
+/* costumer ratings section */
+
+
+
+.organize {
+  background: var(--banner-background-color);
+  position: relative;
+  top: -2em;
+  left: 0;
+  right: 0;
+  height: 30em;
+}
+
+.organize h2 {
+  display: flex;
+  font-size: 4em;
+  width: 19em;
+}
+
+button {
+  position: absolute;
+  top: 27em;
+  margin: 3em;
+  padding: 1em;
+  border-radius: 1.4em;
+  background: black;
+  color: #d3efff;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 2em;
+  text-align: center;
+  align-items: self-start;
+  justify-content: center;
+  font-family: var(--dancing-script-font);
+  position: relative;
+  color: black;
+  top: 15em;
+  left: 12em;
+  width: 70%;
+  height: 40rem;
+  border: 1px solid var(--text-color);
+  border-radius: 1em;
+  margin-top: 15em;
+  margin: 0 auto;
+  opacity: 0;
+  background: var(--banner-background-color);
+  z-index: 2;
+  animation-name: slide-up;
+  transition: transform, 2s ease, opacity 2s ease;
+}
+
+main aside {
+  text-align: left;
+  padding-left: 1em;
+  font-weight: bold;
+}
+main form input {
+  padding: 1.3em 4.5em;
+  border-radius: 1em;
+}
+
+main form button {
+  padding: 0.8em 2.4em;
+  border: none;
+  opacity: 0.8;
+  font-size: 0.9em;
+}
+
+#todos {
+  list-style-type: none;
+  margin: 1em;
+  z-index: 30;
+  color: white;
+}
+.form_input h2:nth-child(1) {
+  font-size: 2em;
+}
+
+.form_input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.start_btn {
+  border: none;
+}
+.ascend {
+  transform: translateY(-200px);
+  opacity: 0.8;
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: -1;
+    transform: translateY(4em);
+  }
+
+  50% {
+    opacity: 0.1;
+    transform: translateY(-1em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-37rem);
+  }
+}
+/* using css class selectors starts here  */
+.todo_item {
+  color: var(--text-color);
+  margin-top: 1em;
+  font-size: 1.9em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.todo_item hr {
+  width: 24em;
+  margin-top: 1em;
+}
+
+.todo_item input {
+  margin-right: 1em;
+}
