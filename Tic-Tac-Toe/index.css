@@ -1,0 +1,122 @@
+:root {
+  --background-color: #ffd2da;
+  --main-background-color: #fdecef;
+  --tic-fail-color: #f34954;
+  --tic-win-color: #f9d459;
+  --font-family: "Roboto", sans-serif;
+  --round-background: #ffc400;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--background-color);
+  font-family: var(--font-family);
+}
+
+h1 b {
+  color: #f34954;
+}
+.INS {
+  font-size: 2.5em;
+}
+.main_container {
+  margin: 1em auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+main {
+  background: var(--main-background-color);
+  border: 1px solid var(--main-background-color);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 1em;
+  padding: 6em;
+  margin: 1em auto;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+}
+#round{
+  margin: 0 auto;
+  margin-top: -3em;
+  margin-bottom: 1em;
+  background: var(--round-background);
+  width: 4em;
+  text-align: center;
+  vertical-align: center;
+  height: 2em;
+  padding: 0.9em;
+  border-radius: 5em;
+}
+#print{
+  background: var(--tic-win-color);
+  padding: 4em;
+  border-radius: 2em;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.ticbtns {
+  height: 6em;
+  width: 6em;
+  text-align: center;
+  border: 5px dashed #f34954;
+  font-size: larger;
+  font-weight: bold;
+  color: white;
+  transition: background-color 1s linear;
+}
+
+.reset_button {
+  margin-left: 3em;
+  padding: 1em;
+  border-radius: 0.3em;
+  font-weight: bold;
+}
+/* moves coloring css */
+
+
+.x_move {
+  background-color: var(--tic-fail-color);
+  color: #fdecef;
+}
+
+.o_move {
+  background: var(--tic-fail-color);
+  color: #f9d459;
+}
+
+.win_color {
+  background-color: var(--tic-win-color);
+  color: white;
+}
+
+
+/* player id css */
+
+.player_x{
+  border: 1px solid var(--tic-fail-color);
+  border-radius: 2em;
+  padding: 1em;
+}
+
+.player_x img{
+  width: 7em;
+  height: 7em;
+  border-radius: 1em;
+}
+
+.player_o{
+  border: 1px solid var(--tic-fail-color);
+  border-radius: 2em;
+  padding: 1em;
+}
+
+.player_o img{
+  width: 7em;
+  height: 7em;
+  border-radius: 1em;
+}
