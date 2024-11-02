@@ -50,10 +50,10 @@ nav ul li a {
   font-weight: bold;
 }
 /* page content layout css */
-.image_container{
-position: absolute;
-top: 2em;
-left: 15em;
+.image_container {
+  position: absolute;
+  top: 2em;
+  left: 15em;
 }
 
 .image_container img:nth-child(2) {
@@ -86,13 +86,20 @@ left: 15em;
   gap: 2em;
   align-items: self-start;
   justify-content: space-between;
-  margin-top: 2em;
+  margin-top: 6em;
   font-size: 1.6em;
+  list-style-type: none;
+  animation: appear-right 6s both;
+}
+
+.content_container aside ul hr{
+  height: 0.2em;
+  width: 10em;
+  background: black;
+  margin-left: -5vw;
 }
 
 /* costumer ratings section */
-
-
 
 .organize {
   background: var(--banner-background-color);
@@ -107,6 +114,7 @@ left: 15em;
   display: flex;
   font-size: 4em;
   width: 19em;
+  animation: descend 5s both;
 }
 
 button {
@@ -127,7 +135,17 @@ button {
     transform: rotate(360deg);
   }
 }
-
+@keyframes appear-right {
+  from {
+    transform: none;
+    opacity: 0;
+  }
+  50%,
+  to {
+    transform: translateX(5vw);
+    opacity: 1;
+  }
+}
 main {
   display: flex;
   flex-wrap: wrap;
