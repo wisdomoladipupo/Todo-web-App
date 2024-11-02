@@ -39,7 +39,11 @@ main {
   align-items: center;
   justify-content: center;
 }
-#round{
+main form {
+  animation: descend 6s both;
+}
+
+#round {
   margin: 0 auto;
   margin-top: -3em;
   margin-bottom: 1em;
@@ -48,10 +52,10 @@ main {
   text-align: center;
   vertical-align: center;
   height: 2em;
-  padding: 0.9em;
+  padding: 0.5em 0.9em;
   border-radius: 5em;
 }
-#print{
+#print {
   background: var(--tic-win-color);
   padding: 4em;
   border-radius: 2em;
@@ -69,7 +73,11 @@ main {
   color: white;
   transition: background-color 1s linear;
 }
-
+.button_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .reset_button {
   margin-left: 3em;
   padding: 1em;
@@ -77,7 +85,6 @@ main {
   font-weight: bold;
 }
 /* moves coloring css */
-
 
 .x_move {
   background-color: var(--tic-fail-color);
@@ -94,29 +101,79 @@ main {
   color: white;
 }
 
-
 /* player id css */
 
-.player_x{
+.player_x {
   border: 1px solid var(--tic-fail-color);
   border-radius: 2em;
   padding: 1em;
+  margin-right: 3em;
 }
 
-.player_x img{
+.player_x img {
   width: 7em;
   height: 7em;
   border-radius: 1em;
+  animation: spin 3s both;
 }
 
-.player_o{
+.player_o {
   border: 1px solid var(--tic-fail-color);
   border-radius: 2em;
   padding: 1em;
+  margin-left: 3em;
+
 }
 
-.player_o img{
+
+.player_o img {
   width: 7em;
   height: 7em;
   border-radius: 1em;
+  animation: spin  3s both;
+}
+
+/* css animations */
+
+@keyframes descend {
+  from {
+    transform: none;
+    opacity: 0;
+  }
+  50%,
+  to {
+    transform: translateY(5vh);
+    opacity: 1;
+  }
+}
+
+/* @keyframes enlarge {
+  from{
+    transform: none;
+  }
+  50%{
+    transform: scale(150%);
+  }
+
+  to{
+    transform: none;
+  }
+} */
+
+@keyframes spin {
+  from {
+    transform: none;
+  }
+  30%{
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: scale(150%);
+  }
+  80%{
+    transform: rotate(180deg);
+  }
+  to{
+    transform: none;
+  }
 }
