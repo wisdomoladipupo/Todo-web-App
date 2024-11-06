@@ -37,9 +37,12 @@ function HandleMove(index) {
       flag ? "x" : "0"
     } won!`;
     setTimeout(resetBoard, 4000);
+
   } else if (buttons.every((btn) => btn.textContent !== "")) {
     document.getElementById("print").innerHTML = `it's is a tie`;
+
     setTimeout(resetBoard, 4000);
+  
   } else {
     flag = 1 - flag;
     document.getElementById("print").innerHTML = `its player ${

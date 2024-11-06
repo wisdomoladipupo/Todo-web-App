@@ -47,7 +47,7 @@ main form {
   margin: 0 auto;
   margin-top: -3em;
   margin-bottom: 1em;
-  background: var(--round-background);
+
   width: 4em;
   text-align: center;
   vertical-align: center;
@@ -57,8 +57,9 @@ main form {
 }
 #print {
   background: var(--tic-win-color);
-  padding: 4em;
-  border-radius: 2em;
+  padding: 2em 4em;
+  border-radius: 1em;
+  margin-top: 5em;
   font-weight: bold;
   font-size: 1em;
 }
@@ -122,15 +123,13 @@ main form {
   border-radius: 2em;
   padding: 1em;
   margin-left: 3em;
-
 }
-
 
 .player_o img {
   width: 7em;
   height: 7em;
   border-radius: 1em;
-  animation: spin  3s both;
+  animation: spin 3s both;
 }
 
 /* css animations */
@@ -164,16 +163,43 @@ main form {
   from {
     transform: none;
   }
-  30%{
+  30% {
     transform: rotate(360deg);
   }
   50% {
     transform: scale(150%);
   }
-  80%{
+  80% {
     transform: rotate(180deg);
   }
-  to{
+  to {
     transform: none;
+  }
+}
+
+/* ball practice */
+
+.ball {
+  height: 5vmin;
+  width: 5vmin;
+  border-radius: 50%;
+  left: 20em;
+  background: radial-gradient(circle at bottom right, #fb2324, #fe932a);
+  background: blue;
+  animation: move-right 3s both;
+}
+
+.ball:nth-child(2) {
+  animation-delay: 2s;
+}
+.ball:nth-child(3) {
+  animation-delay: 1s;
+}
+@keyframes move-right {
+  from {
+    transform: none;
+  }
+  to {
+    transform: translateX(25vw);
   }
 }
