@@ -92,11 +92,11 @@ nav ul li a {
   animation: appear-right 6s both;
 }
 
-.content_container aside ul hr{
-  height: 0.2em;
+.content_container aside ul hr {
+  height: 0.1em;
   width: 10em;
   background: black;
-  margin-left: -5vw;
+  margin-left: -4vw;
 }
 
 /* costumer ratings section */
@@ -117,7 +117,7 @@ nav ul li a {
   animation: descend 5s both;
 }
 
-button {
+.organize button {
   position: absolute;
   top: 27em;
   margin: 3em;
@@ -146,9 +146,9 @@ button {
     opacity: 1;
   }
 }
+
 main {
   display: flex;
-  flex-wrap: wrap;
   padding-top: 2em;
   text-align: center;
   align-items: self-start;
@@ -156,10 +156,10 @@ main {
   font-family: var(--dancing-script-font);
   position: relative;
   color: black;
-  top: 15em;
-  left: 12em;
+  top: 12em;
+  left: 10em;
   width: 70%;
-  height: 40rem;
+  height: 50rem;
   border: 1px solid var(--text-color);
   border-radius: 1em;
   margin-top: 15em;
@@ -169,6 +169,12 @@ main {
   z-index: 2;
   animation-name: slide-up;
   transition: transform, 2s ease, opacity 2s ease;
+}
+
+main form {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
 }
 
 main aside {
@@ -186,6 +192,8 @@ main form button {
   border: none;
   opacity: 0.8;
   font-size: 0.9em;
+  border-radius: 1em;
+  background: var(--background-color);
 }
 
 #todos {
